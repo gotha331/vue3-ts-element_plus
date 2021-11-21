@@ -2,6 +2,9 @@
   <button type="button" @click="count++">count is: {{ count }}</button>
   <h2>我是store的state的count值：{{ showCount }}</h2>
   <button @click="addBtn">count增加</button>
+  <br />
+  <br />
+  <el-button type="primary">test</el-button>
 </template>
 
 <script setup lang="ts">
