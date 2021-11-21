@@ -6,7 +6,7 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-import { useStore } from '../store'
+import { useStore } from '@/store'
 
 const count = ref(6)
 const store = useStore()
