@@ -18,7 +18,6 @@ const showCount = computed(() => {
 const addBtn = () => {
   store.commit('setCount', ++count.value)
 }
-
 </script>
 
 <style scoped>
