@@ -1,18 +1,36 @@
+/*!
+ * https://eslint.bootcss.com/docs/rules/
+ * https://eslint.vuejs.org/rules/
+ *
+ * - 0: off
+ * - 1: warn
+ * - 2: error
+ */
+
+// @ts-check
 module.exports = {
   root: true,
   env: {
-    node: true
+    browser: true,
+    node: true,
+    es6: true
   },
-  'extends': [
+  extends: [
     'plugin:vue/vue3-essential',
     'eslint:recommended',
-    '@vue/prettier'
+    '@vue/typescript/recommended',
+    'prettier',
+    '@vue/prettier',
+    '@vue/prettier/@typescript-eslint'
   ],
+  plugins: ['prettier'],
   parserOptions: {
     ecmaVersion: 2020
   },
   rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off'
+    'prettier/prettier': 'error',
+    'arrow-body-style': 'off',
+    'prefer-arrow-callback': 'off',
+    'vue/multi-word-component-names': 'off'
   }
 }
