@@ -15,14 +15,14 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src'),
-      'comps': resolve(__dirname, 'src/components'),
-      'apis': resolve(__dirname, 'src/apis'),
-      'views': resolve(__dirname, 'src/views'),
-      'utils': resolve(__dirname, 'src/utils'),
-      'routes': resolve(__dirname, 'src/routes'),
-      'styles': resolve(__dirname, 'src/styles'),
-      'plugins': resolve(__dirname, 'src/plugins'),
-      'layouts': resolve(__dirname, 'src/layouts'),
+      comps: resolve(__dirname, 'src/components'),
+      apis: resolve(__dirname, 'src/apis'),
+      views: resolve(__dirname, 'src/views'),
+      utils: resolve(__dirname, 'src/utils'),
+      routes: resolve(__dirname, 'src/routes'),
+      styles: resolve(__dirname, 'src/styles'),
+      plugins: resolve(__dirname, 'src/plugins'),
+      layouts: resolve(__dirname, 'src/layouts')
     }
   },
   plugins: [
