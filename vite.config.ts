@@ -22,7 +22,7 @@ export default defineConfig({
       routes: resolve(__dirname, 'src/routes'),
       styles: resolve(__dirname, 'src/styles'),
       plugins: resolve(__dirname, 'src/plugins'),
-      layouts: resolve(__dirname, 'src/layouts')
+      layout: resolve(__dirname, 'src/layout')
     }
   },
   plugins: [

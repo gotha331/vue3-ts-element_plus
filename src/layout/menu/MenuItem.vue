@@ -2,24 +2,26 @@
   <template v-for="menu in menuList" :key="menu.path">
     <el-sub-menu v-if="menu.children && menu.children.length" :index="menu.path">
       <template #title>
-        <!-- <el-icon><location /></el-icon> -->
-        <i :class="menu.meta.icon"></i>
+        <el-icon>
+          <component :is="menu.meta.icon" />
+        </el-icon>
         <span>{{ menu.meta.title }}</span>
       </template>
       <menu-item :menu-list="menu.children"></menu-item>
     </el-sub-menu>
 
     <el-menu-item v-else :index="menu.path" style="color: #f4f5f5">
-      <!-- <el-icon><icon-menu /></el-icon> -->
-      <i :class="menu.meta.icon"></i>
+      <el-icon>
+        <component :is="menu.meta.icon" />
+      </el-icon>
       <template #title>{{ menu.meta.title }}</template>
     </el-menu-item>
   </template>
 </template>
 
 <script setup lang="ts">
-import { Interface } from 'readline'
-import { PropType } from 'vue'
+// import { Interface } from 'readline'
+// import { PropType } from 'vue'
 
 // interface menuProps {
 //   path: string
