@@ -1,48 +1,31 @@
 <template>
-  <el-container class="layout">
-    <el-aside class="aside" width="auto">
-      <MenuLogo></MenuLogo>
-      <MenuBar></MenuBar>
-    </el-aside>
-    <el-container>
-      <el-header class="header">
-        <Header></Header>
-      </el-header>
-      <el-main class="main">
-        <el-icon>
-          <edit />
-        </el-icon>
-        <el-icon><trend-charts /></el-icon>
+  <div class="app-wrapper">
+    <!-- 侧边栏 -->
+    <div class="sidebar-container has-logo">
+      <side-bar />
+    </div>
 
-        <el-icon><Setting /></el-icon>
-
-        <el-icon><BrushFilled /></el-icon>
-        <el-icon><AlarmClock /></el-icon>
-
-        <el-icon><chat-dot-square /></el-icon>
-
-        <el-icon><circle-check-filled /></el-icon>
-      </el-main>
-    </el-container>
-  </el-container>
+    <!-- 右侧内容区 -->
+    <div class="main-container">
+      <nav-bar />
+      <app-main />
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
-import Header from './header/Header.vue'
-import MenuBar from './menu/MenuBar.vue'
-import MenuLogo from './menu/MenuLogo.vue'
+import SideBar from './components/Sidebar/Index.vue'
+import NavBar from './components/NavBar.vue'
+import AppMain from './components/AppMain.vue'
 </script>
 
 <style lang="scss" scoped>
-.layout {
-  height: 100vh;
-  .aside {
-    background-color: rgb(48, 65, 86);
-  }
+@import 'styles/mixin.scss';
 
-  .header {
-    height: 50px;
-    border-bottom: 1px solid #e5e5e5;
-  }
+.app-wrapper {
+  @include clearfix;
+  position: relative;
+  height: 100%;
+  width: 100%;
 }
 </style>

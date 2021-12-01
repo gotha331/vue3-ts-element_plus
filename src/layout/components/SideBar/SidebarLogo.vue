@@ -27,7 +27,7 @@
   span {
     font-weight: 600;
     line-height: 50px;
-    font-size: 16px;
+    font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
     vertical-align: middle;
   }
